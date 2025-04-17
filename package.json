@@ -1,0 +1,31 @@
+{
+  "name": "hair-boutique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "allTests": "npx playwright test",
+    "uiTests": "npx playwright test -g @UI",
+    "apiTests": "npx playwright test -g @API",
+    "create-report": "allure generate --clean",
+    "open-report": "allure open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nzrnk/hair-boutique.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nzrnk/hair-boutique/issues"
+  },
+  "homepage": "https://github.com/nzrnk/hair-boutique#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0",
+    "allure-playwright": "^3.2.1"
+  }
+}
