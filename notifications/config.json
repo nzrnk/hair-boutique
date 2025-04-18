@@ -1,0 +1,20 @@
+{
+    "base": {
+      "logo": "",
+      "project": "Hair-Boutique",
+      "environment": "",
+      "comment": "",
+      "reportLink": "",
+      "language": "en",
+      "allureFolder": "allure-report",
+      "enableChart": true,
+      "enableSuitesPublishing": false,
+      "customData": {}
+    },
+    "telegram": {
+      "token": "8063879295:AAEhDbzwCQrBtIzyOKgDccDVDSBgZihF_Gg",
+      "chat": "-4669798936",
+      "topic": "",
+      "replyTo": ""
+    }
+}
