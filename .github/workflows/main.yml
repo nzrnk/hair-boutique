@@ -45,19 +45,9 @@ jobs:
           path: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate Allure Report
-        run: |
-          npx allure generate allure-results -o allure-report
+        run: npx allure generate allure-results -o allure-report
       - name: Generate Allure Report
         run: npx allure generate allure-results -o allure-report
-      #- uses: simple-elf/allure-report-action@master
-      #  continue-on-error: true
-      #  id: allure-report
-      #  with:
-      #    allure_results: allure-results
-      #    gh_pages: gh-pages
-      #    allure_report: allure-report
-      #    allure_history: allure-history
-      #    keep_reports: 20
       - name: deploy allure report to gh pages
       - uses: peaceiris/actions-gh-pages@v4
         if: always()
