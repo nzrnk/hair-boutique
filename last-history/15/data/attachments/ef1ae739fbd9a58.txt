@@ -1,0 +1,249 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: @UI Авторизоваться на сайте с типом пользователя "частное лицо" c помощью пароля
+- Location: /home/runner/work/hair-boutique/hair-boutique/tests/ui/user.spec.js:21:5
+
+# Error details
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByLabel('Перейти в личный кабинет') to be visible
+
+    at /home/runner/work/hair-boutique/hair-boutique/src/pages/registration.page.js:46:46
+    at RegistrationPage.goToPersonalAccount (/home/runner/work/hair-boutique/hair-boutique/src/pages/registration.page.js:45:20)
+    at Object.appReg (/home/runner/work/hair-boutique/hair-boutique/src/fixtures/fixtures.js:41:36)
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - button "Санкт-Петербург" [disabled]:
+    - img
+    - text: Санкт-Петербург
+  - text: Это ваш город?
+  - button "Да"
+  - button "Нет, выберу другой"
+  - link "Перейти на главную страницу":
+    - img
+  - link "8 (812) 561-42-33"
+  - link "Оплатить заказ"
+  - navigation:
+    - button
+    - menu:
+      - menuitem "Волосы для наращивания":
+        - link "Волосы для наращивания"
+      - menuitem "Натуральные волосы":
+        - link "Натуральные волосы"
+      - menuitem "Искусственные волосы":
+        - link "Искусственные волосы"
+      - menuitem "Инструменты для наращивания":
+        - link "Инструменты для наращивания"
+      - listitem
+    - button "Показать форму поиска":
+      - img
+    - link "Войти в личный кабинет":
+      - img
+    - link "Перейти в избранное":
+      - img
+    - link "Перейти в корзину":
+      - img
+- main:
+  - heading "Регистрация" [level=1]
+  - list:
+    - listitem:
+      - button "Как частное лицо"
+    - listitem:
+      - button "Как юрлицо"
+  - text: ФИО
+  - textbox "ФИО": Тестовый-пользователь-Ильина Евдокия
+  - text: Телефон
+  - textbox "Телефон": +7 (935) 014-59-00
+  - text: E-mail
+  - textbox "E-mail": test_email_Raymond_Lowe@hotmail.com
+  - text: Пароль
+  - textbox "Пароль": 3mdRyVxMh
+  - text: Подтвердите пароль
+  - textbox "Подтвердите пароль": 3mdRyVxMh
+  - checkbox "Соглашаюсь на обработку персональных данных" [checked]
+  - img
+  - text: Соглашаюсь на обработку персональных данных
+  - button "Отправить"
+- contentinfo:
+  - navigation "Навигация в подвале":
+    - menu:
+      - menuitem "Каталог":
+        - link "Каталог"
+        - menubar:
+          - menuitem "Волосы для наращивания":
+            - link "Волосы для наращивания"
+            - menubar
+          - menuitem "Натуральные волосы":
+            - link "Натуральные волосы"
+            - menubar
+          - menuitem "Искусственные волосы":
+            - link "Искусственные волосы"
+            - menubar
+          - menuitem "Средства для ухода":
+            - link "Средства для ухода"
+            - menubar
+          - menuitem "Инструменты для наращивания":
+            - link "Инструменты для наращивания"
+            - menubar
+      - menuitem "Услуги":
+        - link "Услуги"
+        - menubar:
+          - menuitem "Наращивание волос":
+            - link "Наращивание волос"
+            - menubar
+          - menuitem "Капсульное (горячее) наращивание":
+            - link "Капсульное (горячее) наращивание"
+            - menubar
+          - menuitem "Ленточное (холодное) наращивание":
+            - link "Ленточное (холодное) наращивание"
+            - menubar
+          - menuitem "Кератиновое выпрямление":
+            - link "Кератиновое выпрямление"
+            - menubar
+          - menuitem "Биксипластия":
+            - link "Биксипластия"
+            - menubar
+          - menuitem "Airtouch":
+            - link "Airtouch"
+            - menubar
+          - menuitem "Трендовое окрашивание волос":
+            - link "Трендовое окрашивание волос"
+            - menubar
+          - menuitem "Сложное окрашивание волос":
+            - link "Сложное окрашивание волос"
+            - menubar
+          - menuitem "Школа наращивания волос":
+            - link "Школа наращивания волос"
+            - menubar
+          - menuitem "Покупка волос":
+            - link "Покупка волос"
+            - menubar
+    - menu:
+      - menuitem "Покупателям":
+        - text: Покупателям
+        - menubar:
+          - menuitem "Оплата":
+            - link "Оплата"
+            - menubar
+          - menuitem "Доставка":
+            - link "Доставка"
+            - menubar
+          - menuitem "Реквизиты":
+            - link "Реквизиты"
+            - menubar
+          - menuitem "Оптовым покупателям":
+            - link "Оптовым покупателям"
+            - menubar
+          - menuitem "Публичная оферта":
+            - link "Публичная оферта"
+            - menubar
+      - menuitem "Вопросы и ответы":
+        - link "Вопросы и ответы"
+        - menubar
+      - menuitem "Блог":
+        - link "Блог"
+        - menubar
+      - menuitem "О нас":
+        - link "О нас"
+        - menubar
+      - menuitem "Контакты":
+        - link "Контакты"
+        - menubar
+  - text: г. Санкт-Петербург, Владимирский проспект 17 корпус 3, офис 502
+  - link "8 (812) 561-42-33"
+  - link "sale@hair-boutique.ru"
+  - text: Ежедневно 10:00 – 21:00
+  - list:
+    - listitem:
+      - link "WhatsApp":
+        - img
+        - text: WhatsApp
+    - listitem:
+      - link "ВКонтакте":
+        - img
+        - text: ВКонтакте
+    - listitem:
+      - link "Telegram":
+        - img
+        - text: Telegram
+  - text: © 2025
+  - link "Политика конфиденциальности"
+  - 'link "Создание сайта: агентство RunWay"':
+    - img "Логотип RunWay"
+- dialog:
+  - heading "Упс 🙁" [level=2]
+  - button "Закрыть модальное окно"
+  - text: Логин должен быть не менее 3 символов. Указан некорректный номер телефона.
+- text: Мы используем cookie для улучшения работы сайта
+- button "Согласен"
+- button:
+  - img
+```
+
+# Test source
+
+```ts
+   1 | import { test } from "../fixtures/fixtures";
+   2 |
+   3 | export class RegistrationPage {
+   4 |     constructor(page){
+   5 |         this.page = page;
+   6 |
+   7 |         this.nameFiled = page.getByRole('textbox', { name: 'ФИО' });
+   8 |         this.phoneField = page.getByRole('textbox', { name: 'Телефон' });
+   9 |         this.emailField = page.getByRole('textbox', { name: 'E-mail' });
+  10 |         this.passwordField = page.getByRole('textbox', { name: 'Пароль', exact: true });
+  11 |         this.repeatPasswordField = page.getByRole('textbox', { name: 'Подтвердите пароль' });
+  12 |         
+  13 |         this.personalDataCheckbox = page.getByText('Соглашаюсь на обработку персональных данных');
+  14 |         
+  15 |         this.submitButton = page.getByRole('button', { name: 'Отправить' });
+  16 |         this.personalAccountButton = page.getByLabel('Перейти в личный кабинет');
+  17 |         
+  18 |         this.registrationSuccessMessage = page.locator('.page-user-registration__success-message');
+  19 |     }
+  20 |
+  21 |     async registerPrivate({ name, phone, email, password }){   
+  22 |         await test.step('Зарегистрировать тип пользователя "частное лицо"', async() => {
+  23 |             await this.nameFiled.click();
+  24 |             await this.nameFiled.fill(`Тестовый-пользователь-${name}`);
+  25 |             await this.phoneField.click();
+  26 |             await this.phoneField.fill(phone);
+  27 |             await this.emailField.click();
+  28 |             await this.emailField.fill(`test_email_${email}`);
+  29 |             await this.passwordField.click();
+  30 |             await this.passwordField.fill(password);
+  31 |             await this.repeatPasswordField.click();
+  32 |             await this.repeatPasswordField.fill(password);
+  33 |             await this.personalDataCheckbox.check();
+  34 |             await this.submitButton.click();
+  35 |         })
+  36 |     }  
+  37 |
+  38 |     async waitForRegistrationSuccess(){
+  39 |         await test.step('Ожидать появления сообщения об успехе', async() => {
+  40 |             await this.registrationSuccessMessage.waitFor({ state: 'visible' });
+  41 |         })
+  42 |     }
+  43 |
+  44 |     async goToPersonalAccount(){
+  45 |         await test.step('Перейти в личный кабинет', async() => {
+> 46 |             await this.personalAccountButton.waitFor({ state: 'visible' });
+     |                                              ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
+  47 |             await this.personalAccountButton.click();
+  48 |         })
+  49 |     }
+  50 | }
+```
