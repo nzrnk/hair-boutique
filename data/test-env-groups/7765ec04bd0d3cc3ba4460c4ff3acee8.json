@@ -1,1 +1,1 @@
-{"id":"7765ec04bd0d3cc3ba4460c4ff3acee8","fullName":"api/userAddress.api.spec.js:7:5","name":"@API Получить список адресов доставки текущего пользователя","status":"passed","testResultsByEnv":{"default":"54cb0af61d12bcc1d8ce5b88fafc6dff"}}
+{"id":"7765ec04bd0d3cc3ba4460c4ff3acee8","fullName":"api/userAddress.api.spec.js:7:5","name":"@API Получить список адресов доставки текущего пользователя","status":"passed","testResultsByEnv":{"default":"5f65c81cd004e27a4926b9a4cf8c5193"}}
