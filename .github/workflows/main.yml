@@ -46,8 +46,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate Allure Report
         run: npx allure generate allure-results -o allure-report
-      - name: Generate Allure Report
-        run: npx allure generate allure-results -o allure-report
       - name: deploy allure report to gh pages
         uses: peaceiris/actions-gh-pages@v4
         if: always()
