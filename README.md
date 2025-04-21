@@ -84,4 +84,6 @@ npm run open-report
 
 ---
 ## Уведомление в Telegram
-<img src="./img/jenkins-tg.jpg" alt="testops" width="100%" height="400"/>
+<div align="center">
+<img src="./img/jenkins-tg.jpg" alt="testops" />
+</div>
