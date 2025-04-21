@@ -44,7 +44,7 @@ test.describe('@API Добавить новый адрес', async() => {
 })
 
 
-test('@API Сделать адрес избранным', async({ apiAddAndDeleteAddress }) => {
+test('@API Сделать выбранный адрес доставки избранным', async({ apiAddAndDeleteAddress }) => {
     const response = await apiAddAndDeleteAddress.authAppApi.userAddressApi.changeAddress( {
         data: {
             id: apiAddAndDeleteAddress.addedAddressId,
