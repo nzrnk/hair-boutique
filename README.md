@@ -66,4 +66,4 @@ npm run open-report
 ---
 ## Запуск пайплайна автотестов в Jenkins
 
-Для запуска пайплайна необходимо авторизоваться на сайте [Jenkins](#https://jenkins.autotests.cloud/login?from=%2F)
+Для запуска пайплайна необходимо авторизоваться на сайте [Jenkins](https://jenkins.autotests.cloud/login?from=%2F)
