@@ -76,3 +76,7 @@ npm run open-report
 ## Пример [Allure-отчета](https://jenkins.autotests.cloud/job/002-nzrnk-HB/allure/)
 <img src="./img/img-2.jpg" alt="allure" width="100%" height="400"/>
 <img src="./img/img-3.jpg" alt="allure" width="100%" height="400"/>
+
+---
+## Пример интеграции с [ТестОпс](https://allure.autotests.cloud/project/4716/test-cases?treeId=0)
+<img src="./img/4.jpg" alt="allure" width="100%" height="400"/>
