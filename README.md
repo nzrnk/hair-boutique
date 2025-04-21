@@ -5,7 +5,7 @@
 - [Стек](#Стек)
 - [Тест-кейсы](#Тест-кейсы)
 - [Запуск тестов и генерация отчетов](#Запуск-тестов-и-генерация-отчетов)
-- [Запуск workflow в GitHub Actions](#Запуск-workflow-в-Github-Actions)
+- [Запуск пайплайна автотестов в Jenkins](#Запуск-пайплайна-автотестов-в-Jenkins)
 - [Пример Allure отчета](#Пример-Allure-отчета)
 
 ---
@@ -63,3 +63,7 @@ npm run apiTests
 npm run create-report
 npm run open-report
 ```
+---
+## Запуск пайплайна автотестов в Jenkins
+
+Для запуска пайплайна необходимо авторизоваться на сайте [Jenkins](#https://jenkins.autotests.cloud/login?from=%2F)
