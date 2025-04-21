@@ -18,11 +18,11 @@
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS" width="50" height="50"/>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="PW" width="50" height="50" />
- 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Jenkins" width="50" height="50"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GH" width="50" height="50" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins" width="50" height="50"/>
   <img src="https://github.com/allure-framework/allure2/blob/main/.idea/icon.png" alt="Allure" width="50" height="50"/>
   <img src="https://camo.githubusercontent.com/626a8a0d75f12feb6d876c5bfb3528f3af7fdcb65a996fa7d51c7b5236b3420f/68747470733a2f2f736f667466696e6465722e72752f75706c6f61642f7374796c65732f6c6f676f2f7075626c69632f6c6f676f2f6c6f676f2d323630352e706e673f69746f6b3d767156713163376a" alt="TestOps" width="50" height="50"/>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" width="50" height="50"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" width="50" height="50"/>
 </div>
 
 Репозиторий содержит в себе набор UI и API тестов, напианных на JavaScript c использованием фреймворка автоматизации Playwright. Настроен Jenkins как CI-система: реализован запуск автотестов, генерация Allure-отчетов, интеграция с ТестОпс и отправка уведомлений в Telegram.
