@@ -80,7 +80,7 @@ npm run open-report
 ---
 ## Пример интеграции с [ТестОпс](https://allure.autotests.cloud/project/4716/test-cases?treeId=0)
 <img src="./img/41.jpg" alt="testops" width="100%" height="400"/>
-<img src="./img/5.jpg" alt="testops" width="100%" height="400"/>
+<img src="./img/42.jpg" alt="testops" width="100%" height="400"/>
 
 ---
 ## Уведомление в Telegram
