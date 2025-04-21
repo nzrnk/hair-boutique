@@ -79,4 +79,4 @@ npm run open-report
 
 ---
 ## Пример интеграции с [ТестОпс](https://allure.autotests.cloud/project/4716/test-cases?treeId=0)
-<img src="./img/4.jpg" alt="allure" width="100%" height="400"/>
+<img src="./img/41.jpg" alt="allure" width="100%" height="400"/>
