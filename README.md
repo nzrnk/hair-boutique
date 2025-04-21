@@ -74,5 +74,5 @@ npm run open-report
 
 ---
 ## Пример [Allure-отчета](https://jenkins.autotests.cloud/job/002-nzrnk-HB/allure/)
-<img src="./img/jenkins-allure2.jpg" alt="allure" width="100%" height="400"/>
+<img src="./img/jenkins-allure2.jpg" style="width:1000px; height:500px; object-fit: cover;"/>
 <img src="./img/jenkins-allure3.jpg" alt="allure" width="1500" height="300"/>
