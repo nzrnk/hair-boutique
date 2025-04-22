@@ -13,6 +13,6 @@ class PrivateUser {
 const existPrivateUser = {
     phone: '+7 (921) 222-22-22',
     password: '1234567a'
-}
+};
 
 export { PrivateUser, existPrivateUser };

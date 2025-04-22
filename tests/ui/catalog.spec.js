@@ -10,7 +10,7 @@ test('@UI Добавить товар в корзину', async({ app }) => {
     await app.productPage.goToCart();
     await test.step('Название товара в корзине соответствует названию добавленного товара из каталога', async() => {
         await expect(app.cartPage.productTitle).toContainText(productCatalogTitle);
-    })
+    });
     
 });
 
@@ -20,7 +20,7 @@ test('@UI Добавить товар в избранное', async({ app }) => 
     const productCatalogTitle = await app.productPage.getProductTitle();
     await app.productPage.addToFavorite();
     await app.header.goToFavorite();
-    await test.step('Название товара в избранном соответствует названию добавленного товара каталога', async() => {
+    await test.step('Название товара в избранном соответствует названию добавленного товара из каталога', async() => {
         await expect(app.favoritePage.productTitle).toContainText(productCatalogTitle);
-    })
-})
+    });
+});

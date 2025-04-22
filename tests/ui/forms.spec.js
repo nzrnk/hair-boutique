@@ -5,7 +5,7 @@ import { hairCalc } from '../../src/data';
 test('@UI Рассчитать стоимость наращивания волос и отправить форму расчета', async({ app, formData }) => {
     formData
     .addPhone()
-    .generate()
+    .generate();
     
     await app.header.chooseCity();
     await app.header.openMenu();
@@ -16,4 +16,4 @@ test('@UI Рассчитать стоимость наращивания вол�
         thickness: hairCalc.thickness,
     });
     await app.servicePage.sendPriceCalculatorForm(formData.phone);
-})
+});

@@ -15,7 +15,7 @@ export class ProductPage {
         return await test.step('Название товара из детальной страницы товара', async() => {
             const title = await this.productTitle.textContent();
             return title;
-        })
+        });
         
     }
 

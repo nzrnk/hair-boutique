@@ -3,7 +3,6 @@ import { test } from '@playwright/test';
 export class PersonalAccountPage {
     constructor(page){
         this.page = page;
-
         this.logOutButton = page.getByRole('button', { name: 'Выйти' });
     }
 

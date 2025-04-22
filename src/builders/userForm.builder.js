@@ -28,7 +28,7 @@ export class UserFormBuilder {
             phone: this.phone,
             product: this.product,
             page: this.page,
-        }
+        };
     }
 
 

@@ -11,8 +11,8 @@ test('@API Получить список адресов доставки тек�
         expect(body.result).toBeTruthy();    
         expect(body.data).toBeTruthy();
         expect(body.errors).toHaveLength(0);
-    })
-})
+    });
+});
 
 test.describe('@API Добавить новый адрес', async() => {
     let newAddressId;
@@ -21,27 +21,26 @@ test.describe('@API Добавить новый адрес', async() => {
             data: {
                 id: newAddressId
             }
-        })
-    })
+        });
+    });
     
     test('@API Добавить новый адрес в список адресов доставки текущего пользователя', async({ authAppApi }) => {
         const response = await authAppApi.userAddressApi.addAddress({
             data: {
                 address: addressMoscow
             }
-        })
+        });
         const body = await response.json()
         const list = body.data.list;
-        const city = findElement(list, 'Москва')    
+        const city = findElement(list, 'Москва');  
         newAddressId = city.id;
         await test.step('Возвращается список адресов пользователя с добавленным новым адресом', async() => {
             expect(body.result).toBeTruthy();  
             expect(city.address.full).toContain(addressMoscow)
             expect(body.errors).toHaveLength(0);
-        })
-        
-    })
-})
+        });
+    });
+});
 
 
 test('@API Сделать выбранный адрес доставки избранным', async({ apiAddAndDeleteAddress }) => {
@@ -51,15 +50,14 @@ test('@API Сделать выбранный адрес доставки изб�
             address: addressKazan,
             favorite: true
         }
-    })
+    });
     const list = (await response.json()).data.list;
     const city = findElement(list, 'Казань');
     await test.step('Выбранный адрес становится избранным', async() => {
         expect(city.id).toEqual(apiAddAndDeleteAddress.addedAddressId);  
         expect(city.favorite).toBeTruthy();  
-        
-    })
-})
+    });
+});
 
     
 

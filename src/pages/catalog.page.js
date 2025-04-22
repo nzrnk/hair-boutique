@@ -3,7 +3,6 @@ import { test } from '@playwright/test';
 export class CatalogPage {
     constructor(page){
         this.page = page;
-        
         this.firstInListProduct = page.locator('.group-products__item').first();
     }
 
@@ -12,6 +11,4 @@ export class CatalogPage {
             await this.firstInListProduct.click();
         })
     }
-
-
 } 

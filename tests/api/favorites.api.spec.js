@@ -11,24 +11,23 @@ test.describe('@API Добавление товара в избранное', as
             data: {
                 id: favoritesId,
             }
-        })
-    })  
+        });
+    });
 
     test('@API Добавить товар в избранное', async({ authAppApi }) => {
         const response = await authAppApi.favoritesApi.addToFavorites({
             data: {
                 id: prodId
             }
-        })
-        const body = await response.json()
+        });
+        const body = await response.json();
         const productId = body.data[0].id;
         await test.step('Товар добавлен в избранное', async() => {
             await expect(productId).toBe(prodId);
             await expect(body.errors).toHaveLength(0);
-        })
-    })
-
-})
+        });
+    });
+});
 
 
 

@@ -8,7 +8,7 @@ test('@API Отправить форму "Купить в 1 клик"', async({ 
     .addPhone()
     .addProduct(product.name)
     .addPage(product.page)
-    .generate()
+    .generate();
 
    const response = await appApi.formApi.sendBuyOneClickForm({
         data: {
@@ -17,11 +17,11 @@ test('@API Отправить форму "Купить в 1 клик"', async({ 
             product: formData.product,
             page: formData.page,
         }
-   })
+   });
    const body = await response.json();
    const success = body.data.success;
    await test.step('Успешная отправка формы', async() => {
         await expect(success).toBeTruthy();
         await expect(body.errors).toHaveLength(0);
-   })
-})
+   });
+});

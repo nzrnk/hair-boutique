@@ -14,5 +14,4 @@ export class AppPage {
         this.personalAccountPage = new PersonalAccountPage(page);
         this.servicePage = new ServicePage(page);
     }   
-
 }
