@@ -66,7 +66,7 @@ npm run create-report
 npm run open-report
 ```
 ---
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins" width="5" height="5"/> ## Запуск пайплайна автотестов в [Jenkins](https://jenkins.autotests.cloud/job/002-nzrnk-HB/)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins" width="10" height="10"/> ## Запуск пайплайна автотестов в [Jenkins](https://jenkins.autotests.cloud/job/002-nzrnk-HB/)
 
 Для запуска пайплайна необходимо авторизоваться на сайте [Jenkins](https://jenkins.autotests.cloud/login?from=%2F), перейти в соответствующую [джобу](https://jenkins.autotests.cloud/job/002-nzrnk-HB/) и нажать Build Now. После завершения сборки будет сформирован Allure-отчет, результаты сборки будут отправлены в ТестОпс, а так же в Telegram. В разделе Builds напротив номера сборки появятся иконки Allure (cсылка на Allure-отчет так же есть на основной странице) и ТестОпс, перейдя по которым можно посмотреть результаты сборки.
 
