@@ -14,7 +14,7 @@ test.describe('@API Добавление товара в избранное', as
         })
     })  
 
-    test('@API Добавить товар в избренное', async({ authAppApi }) => {
+    test('@API Добавить товар в избранное', async({ authAppApi }) => {
         const response = await authAppApi.favoritesApi.addToFavorites({
             data: {
                 id: prodId
