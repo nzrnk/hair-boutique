@@ -2,7 +2,7 @@ import { test } from '../../src/fixtures/fixtures';
 import { expect } from '@playwright/test';
 import { product } from '../../src/data';
 
-test('@API Отправить форму "Купить в 1 клик', async({ appApi, formData }) => {
+test('@API Отправить форму "Купить в 1 клик"', async({ appApi, formData }) => {
     formData
     .addName()
     .addPhone()
