@@ -2,7 +2,7 @@ import { test } from '../../src/fixtures/fixtures';
 import { hairCalc } from '../../src/data';
 
 
-test('@UI Рассчитать стоимость наращивания волос и отправить форму рассчета', async({ app, formData }) => {
+test('@UI Рассчитать стоимость наращивания волос и отправить форму расчета', async({ app, formData }) => {
     formData
     .addPhone()
     .generate()
