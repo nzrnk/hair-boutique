@@ -18,11 +18,15 @@ test('@UI Зарегистрировать тип пользователя "ча
 });
 
 
-test('@UI Авторизоваться на сайте с типом пользователя "частное лицо" c помощью пароля', async({ app, appReg }) => {
+test.only('@UI Авторизоваться на сайте с типом пользователя "частное лицо" c помощью пароля', async({ app, appReg }) => {
     await app.header.goToLoginPage();
     await app.loginPage.goToLoginWithPassword();
     await app.loginPage.authorizationWithPassword({
         phone: appReg.userLogin,
         password: appReg.userPassword,
     });
+    await app.loginPage.waitForSuccessMessage()
+    await test.step('Появляется сообщение об успешной авторизации', async() => {
+        await expect(app.loginPage.loginSuccessMessage).toContainText('Вход в систему успешно выполнен');
+    })
 });

@@ -11,6 +11,8 @@ export class LoginPage {
         
         this.phoneField = page.locator('.user-login-password__field > .form-field__control--type-tel').getByRole('textbox', { name: 'Телефон' });
         this.passwordFiled = page.getByRole('textbox', { name: 'Пароль' });
+
+        this.loginSuccessMessage = page.locator('.user-login-success__success-message');
     }
     
     async goToRegistration(){
@@ -32,6 +34,12 @@ export class LoginPage {
             await this.passwordFiled.click();
             await this.passwordFiled.fill(password);
             await this.submitButton.click();
+        })
+    }
+
+    async waitForSuccessMessage(){
+        await test.step('Ожидать появления сообщения об успешной авторизации', async() => {
+            await this.loginSuccessMessage.waitFor({ state: 'visible' });
         })
     }
 }

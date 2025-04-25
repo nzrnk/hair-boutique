@@ -14,6 +14,9 @@ export class ServicePage {
 
         this.nameField = page.locator('.form-block__form-fields > .form-field-name').getByRole('textbox', { name: 'Имя' }).nth(1);
         this.phoneField = page.locator('.form-block__form-fields > .form-field-phone').getByRole('textbox', { name: 'Телефон' }).nth(1);
+        
+        this.successTitle = page.locator('.form-block__success-title');
+        this.successMessage = page.locator('.form-block__success-message');
     }
 
     async calculateHairExtension({purpose, length, thickness}){
@@ -40,6 +43,13 @@ export class ServicePage {
             await this.phoneField.fill(phone);
             await this.sendFormButton.click();
        })
+    }
+
+    async waitForSuccessMessage(){
+        await test.step('Ожидать появления сообщения об успешной отправке формы', async() => {
+            await this.successTitle.waitFor({ state: 'visible' });
+            await this.successMessage.waitFor({ state: 'visible' });
+        })
     }
 
 }
