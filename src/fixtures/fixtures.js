@@ -23,26 +23,7 @@ export const test = base.extend({
         const formData = new UserFormBuilder();
         use(formData);
     },
-
-    appReg: async({ app, newPrivateUser }, use) => {
-        await app.header.goToLoginPage();
-        await app.loginPage.goToRegistration();
-        await app.header.goToLoginPage();
-        await app.loginPage.goToRegistration();
-        await app.registrationPage.registerPrivate({
-            name: newPrivateUser.name,
-            phone: newPrivateUser.phone,
-            email: newPrivateUser.email,
-            password: newPrivateUser.password,
-            repeatPassword: newPrivateUser.password,
-        });
-        const userLogin = newPrivateUser.phone;
-        const userPassword = newPrivateUser.password;
-        await app.registrationPage.goToPersonalAccount();
-        await app.personalAccountPage.logOut();
-        await use({ userLogin, userPassword });
-    },
-    
+  
     sessionCookie: async({}, use) => {
         const apiContext = await request.newContext();
         const appApi = new AppApi(apiContext);
@@ -91,5 +72,27 @@ export const test = base.extend({
     appApi: async({ request }, use) => {
         const appApi = new AppApi(request);
         await use(appApi);
+    },
+
+    deleteFromFavorites: async({ authAppApi }, use) => {
+        const deleteId = {};
+        await use(deleteId);
+        await authAppApi.favoritesApi.deleteFromFavorites({
+            data: {
+                id: deleteId.id,
+            }
+        });
+    },
+
+    deleteFromAddress: async({ authAppApi }, use) => {
+        const deleteId = {};
+        await use(deleteId);
+        const response = await authAppApi.userAddressApi.deleteAddress({
+            data: {
+                id: deleteId.id
+            }
+        });
+        const body = await response.json();
+        console.log(body);
     }
-})
+});

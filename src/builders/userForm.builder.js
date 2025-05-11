@@ -1,9 +1,9 @@
 import { faker, fakerRU } from '@faker-js/faker';
- 
+
 export class UserFormBuilder {
     
     addName(){
-        this.name = 'Тестовая форма не обрабатывать';
+        this.name = `Тестовая форма не обрабатывать ${Date().toString().slice(0, 24)}`;
         return this;
     }
 
